@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+  <title>SnapTik - TikTok Video Downloader</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">SnapTik</div>
+    <div class="subtitle">TikTok Video Downloader</div>
+  </header>
+
+  <main>
+    <section class="download-box">
+      <h1>Download Video TikTok</h1>
+      <p>Tempel link video TikTok untuk melihat dan mengunduh video.</p>
+      <form id="downloadForm" class="input-box">
+        <input type="url" id="tiktokUrl" placeholder="Paste link TikTok di sini..." autocomplete="url" required>
+        <button id="submitBtn" type="submit">Unduh</button>
+      </form>
+      <button class="paste-button" id="pasteBtn" type="button">📋 Tempel Link</button>
+      <div id="message" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="preview" id="preview" hidden>
+      <h2>Preview Video</h2>
+      <div class="video-wrap">
+        <video id="videoPlayer" controls playsinline preload="metadata"></video>
+      </div>
+      <div id="videoTitle" class="video-title"></div>
+      <a id="downloadBtn" class="download-button" href="#" hidden>⬇️ Download Video</a>
+    </section>
+
+    <section class="info">
+      <h2>Cara menggunakan SnapTik</h2>
+      <div class="steps">
+        <div class="step"><b>1</b><span>Salin link video TikTok publik</span></div>
+        <div class="step"><b>2</b><span>Tempel link di kotak di atas</span></div>
+        <div class="step"><b>3</b><span>Tekan Unduh, lalu putar atau download video</span></div>
+      </div>
+      <p class="notice">Hanya gunakan untuk video yang kamu miliki atau yang izinnya kamu punya. Video privat atau yang dibatasi TikTok mungkin tidak dapat diambil.</p>
+    </section>
+  </main>
+
+  <footer>SnapTik © 2026</footer>
+</body>
+</html>

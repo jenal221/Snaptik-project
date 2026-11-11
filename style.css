@@ -1,0 +1,43 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+body { background: #f4f5f7; color: #171717; min-height: 100vh; }
+header { background: #111; color: white; text-align: center; padding: 24px 15px; }
+.logo { font-size: 30px; font-weight: 800; letter-spacing: .3px; }
+.subtitle { color: #bdbdbd; font-size: 14px; margin-top: 5px; }
+main { width: min(650px, 100%); margin: 42px auto; padding: 0 18px; }
+.download-box, .preview, .info { background: white; padding: 28px 22px; border-radius: 18px; box-shadow: 0 5px 25px rgba(0,0,0,.07); }
+.download-box { text-align: center; }
+.download-box h1 { font-size: clamp(22px, 5vw, 27px); margin-bottom: 10px; }
+.download-box p { color: #707070; font-size: 14px; line-height: 1.5; margin-bottom: 22px; }
+.input-box { display: flex; gap: 10px; }
+.input-box input { min-width: 0; flex: 1; height: 52px; padding: 0 14px; border: 1px solid #d9d9d9; border-radius: 10px; outline: none; font-size: 14px; }
+.input-box input:focus { border-color: #111; box-shadow: 0 0 0 3px rgba(0,0,0,.07); }
+button, .download-button { border: 0; border-radius: 10px; cursor: pointer; font-weight: 700; }
+.input-box button, .download-button { background: #111; color: white; }
+.input-box button { padding: 0 22px; }
+button:disabled { opacity: .6; cursor: wait; }
+.paste-button { margin-top: 13px; width: 100%; min-height: 45px; border: 1px solid #ddd; background: white; }
+.paste-button:hover { background: #f5f5f5; }
+#message { min-height: 20px; margin-top: 15px; font-size: 14px; line-height: 1.45; }
+#message.error { color: #c62828; }
+#message.success { color: #16803c; }
+#message.info { color: #555; }
+.preview { margin-top: 22px; }
+.preview[hidden], .download-button[hidden] { display: none; }
+.preview h2, .info h2 { font-size: 20px; margin-bottom: 15px; }
+.video-wrap { background: #080808; border-radius: 12px; overflow: hidden; }
+#videoPlayer { display: block; width: 100%; max-height: 520px; min-height: 180px; background: #080808; }
+.video-title { margin-top: 12px; color: #555; font-size: 14px; overflow-wrap: anywhere; }
+.download-button { display: block; margin-top: 15px; padding: 15px; text-align: center; text-decoration: none; }
+.download-button:hover, .input-box button:hover { background: #333; }
+.info { margin-top: 22px; }
+.steps { display: grid; gap: 14px; }
+.step { display: flex; align-items: center; gap: 12px; color: #444; font-size: 14px; }
+.step b { display: grid; place-items: center; width: 30px; height: 30px; flex: 0 0 30px; background: #111; color: white; border-radius: 50%; }
+.notice { margin-top: 18px; color: #777; font-size: 12px; line-height: 1.5; }
+footer { padding: 20px; text-align: center; color: #888; font-size: 13px; }
+@media (max-width: 480px) {
+  main { margin: 25px auto; padding: 0 13px; }
+  .download-box, .preview, .info { padding: 23px 16px; }
+  .input-box { flex-direction: column; }
+  .input-box button { min-height: 48px; }
+}
